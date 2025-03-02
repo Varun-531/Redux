@@ -1,11 +1,12 @@
 import "./App.css";
-import { Button } from "@/components/ui/button";
+import AddTodo from "./components/AddTodo";
+import AllTodo from "./components/AllTodo";
 
 function App() {
   return (
     <>
-      <h1>Redux Toolkit</h1>
-      <Button>Click Me!!</Button>
+      <AllTodo />
+      <AddTodo />
     </>
   );
 }
