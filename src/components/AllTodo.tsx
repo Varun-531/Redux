@@ -1,7 +1,7 @@
 import React from "react";
 
 function AllTodo() {
-  return <div>AllTodo</div>;
+  return <div>AllTodos</div>;
 }
 
 export default AllTodo;
