@@ -1,10 +1,21 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Input } from "@/components/ui/input";
 import { Button } from "./ui/button";
+import { addTodo } from "@/features/todo/todoSlice";
 
-function AllTodo() {
+function AddTodo() {
   const [input, setInput] = useState("");
-  const addTodoHandler = {};
+  const dispatch = useDispatch();
+
+  const addTodoHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (input.trim()) {
+      dispatch(addTodo(input));
+      setInput("");
+    }
+  };
+
   return (
     <div>
       <form onSubmit={addTodoHandler}>
@@ -20,4 +31,4 @@ function AllTodo() {
   );
 }
 
-export default AllTodo;
+export default AddTodo;
